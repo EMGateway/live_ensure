@@ -4,6 +4,8 @@ Library for implementing two-factor auth via liveensure.com.
 
 ## Getting Started
 
+First, head over to http://www.liveensure.com/ to setup your account and get your API credentials.
+
 Add a line to your gemfile:
 
 ```ruby
@@ -31,7 +33,7 @@ LiveEnsure.configure { |config| config.enabled = true }
 
 ## Implementing LiveEnsure
 
-* Refer to the guides at http://support.liveensure.com/forums/20038873-guides for more details. 
+*Refer to the guides at http://support.liveensure.com/forums/20038873-guides for more details.*
 
 Request a token:
 
@@ -67,31 +69,24 @@ end
 Then I check it from the view using this javascript:
 
 ```javascript
-<script type="text/javascript" charset="utf-8">
-  var check_auth_interval;
+var check_auth_interval;
 
-  function checkAuth() {
-    $.getJSON('/check_auth', function(data) {
-      
-      if (data.status == null || data.status == 'FAILED') {
-        location.href = "/login"
-        clearInterval(check_auth_interval);
-        return;
-      }
-      
-      if (data.status == 'SUCCESS') {
-        location.href = '/complete_auth';
-        clearInterval(check_auth_interval);
-        return;
-      }
-    });
-  }
+function checkAuth() {
+  $.getJSON('/check_auth', function(data) {
+    
+    if (data.status == 'SUCCESS')  {
+      location.href = '/complete_auth';
+    } else if (data.status == null || data.status == 'FAILED') {
+      location.href = '/login';
+    } else {
+      setTimeout(checkAuth, 1000);
+    }
+  });
+}
 
-  $(function() {
-    check_auth_interval = setInterval(checkAuth, 1500);
-  }); 
-</script>
-
+$(function() {
+  check_auth_interval = setTimeout(checkAuth, 1000);
+}); 
 ```
 
 When you get a success message and redirect to the final step, do another check on the session status:
