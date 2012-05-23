@@ -93,7 +93,7 @@ When you get a success message and redirect to the final step, do another check 
 response = LiveEnsure.session_status(session[:live_ensure_token], session[:live_ensure_base_url])
 
 if response.valid?
-  # do something here!
+  # sign in the user!
 else
   # fail!
 end
