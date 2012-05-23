@@ -100,3 +100,7 @@ end
 ```
 
 Want to contribute? Write specs, and send me a detailed pull request.
+
+## License
+
+Licensed under the MIT license: http://www.opensource.org/licenses/MIT
