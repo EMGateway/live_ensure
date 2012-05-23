@@ -46,9 +46,7 @@ session[:live_ensure_base_url] = @live_ensure.base_url
 Add to your view:
 
 ```ruby
-<div id="live-ensure">
-  <%= content_tag(:iframe, '', { src: @live_ensure.launch_url,  width: 320, height: 100, frameborder: 0}) %>
-</div>
+<%= content_tag(:iframe, '', { src: @live_ensure.launch_url,  width: 190, height: 190, frameborder: 0}) %>
 ```
 
 You will need to setup an action to handle a session check using the LiveEnsure.session_status method to detect when the user has successfully authenticated. I use something like this on my sessions controller:
