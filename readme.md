@@ -1,5 +1,7 @@
 # LiveEnsure 
 
+<img src="https://secure.travis-ci.org/InspireStudios/live_ensure.png" />
+
 Library for implementing two-factor auth via liveensure.com.
 
 ## Getting Started
