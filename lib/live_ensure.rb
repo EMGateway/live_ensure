@@ -37,7 +37,7 @@ module LiveEnsure
     end
   
     def start_url(email)
-      "#{HOST}/idr/sessionStart/3/#{email}/#{configuration.api_agent_id}/#{configuration.api_key}/#{configuration.api_password}"
+      "#{HOST}/idr/sessionStart/4/#{email}/#{configuration.api_agent_id}/#{configuration.api_key}/#{configuration.api_password}"
     end
   
     def session_status_url(token)
