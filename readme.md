@@ -1,6 +1,6 @@
 # LiveEnsure 
 
-<img src="https://secure.travis-ci.org/InspireStudios/live_ensure.png" />
+[![Build Status](https://secure.travis-ci.org/InspireStudios/live_ensure.png)](http://travis-ci.org/InspireStudios/live_ensure)
 
 Library for implementing two-factor auth via liveensure.com.
 
