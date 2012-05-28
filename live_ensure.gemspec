@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = LiveEnsure::VERSION
   s.authors     = ["Steve Thompson"]
   s.email       = ["me@stevedev.com"]
-  s.homepage    = "http://www.inspirestudios.ca"
+  s.homepage    = "https://github.com/InspireStudios/live_ensure"
   s.summary     = %q{Live Ensure API for Ruby}
   s.description = %q{Library for interfacing with Live Ensure's Two Factor Auth}
 
