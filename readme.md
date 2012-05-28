@@ -2,6 +2,11 @@
 
 [![Build Status](https://secure.travis-ci.org/InspireStudios/live_ensure.png)](http://travis-ci.org/InspireStudios/live_ensure)
 
+
+[![Dependency Status](https://gemnasium.com/InspireStudios/live_ensure.png?travis)](https://gemnasium.com/InspireStudios/live_ensure)
+
+
+
 Library for implementing two-factor auth via liveensure.com.
 
 ## Getting Started
